@@ -93,7 +93,7 @@ class TetrisSingleEnv(TetrisEnv):
     def __init__(self, gridchoice="none", obs_type="grid", mode="rgb_array"):
         super(TetrisSingleEnv, self).__init__(TetrisSingleInterface, gridchoice, obs_type, mode)
 
-    def khostep(self, action):
+    def step(self, action):
         # Execute one time step within the environment
 
         ob, reward, end, infos = self.game_interface.act(action)
